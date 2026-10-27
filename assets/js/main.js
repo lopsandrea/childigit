@@ -25,6 +25,9 @@
       toggle.focus();
     }
   });
+  header.addEventListener('focusout', (event) => {
+    if (header.classList.contains('menu-open') && !header.contains(event.relatedTarget)) setMenu(false);
+  });
 
   /* Header border once the page scrolls ------------------------------------ */
   const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
@@ -56,6 +59,7 @@
     const num = el.querySelector('[data-count]');
     const label = el.querySelector('[data-count-label]');
     const days = Math.floor(left / DAY);
+    num.parentElement.hidden = false;
 
     if (left <= 0) {
       el.classList.add('is-closed');
@@ -87,25 +91,29 @@
   });
 
   /* Copy e-mail subject ----------------------------------------------------- */
+  const copyStatus = document.getElementById('copy-status');
   document.querySelectorAll('[data-copy]').forEach((button) => {
     if (!navigator.clipboard) {
       button.hidden = true;
       return;
     }
-    const label = button.querySelector('span');
+    const label = button.querySelector('.copy-label');
     button.addEventListener('click', async () => {
       const text = document.querySelector(button.dataset.copy).textContent.trim();
       try {
         await navigator.clipboard.writeText(text);
         button.classList.add('is-done');
         label.textContent = 'Copied!';
+        copyStatus.textContent = 'E-mail subject copied to the clipboard.';
       } catch {
         label.textContent = 'Copy failed';
+        copyStatus.textContent = 'Copy failed: please select the subject and copy it manually.';
       }
       setTimeout(() => {
         button.classList.remove('is-done');
         label.textContent = 'Copy';
-      }, 2000);
+        copyStatus.textContent = '';
+      }, 3000);
     });
   });
 
@@ -129,7 +137,7 @@
       const open = button.getAttribute('aria-expanded') !== 'true';
       button.setAttribute('aria-expanded', String(open));
       bio.classList.toggle('is-open', open);
-      button.textContent = open ? 'Show less' : 'Read full bio';
+      button.querySelector('.bio-toggle-label').textContent = open ? 'Show less' : 'Read full bio';
     });
   });
 

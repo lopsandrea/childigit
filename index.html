@@ -101,7 +101,7 @@
         <span class="nav-toggle-bars" aria-hidden="true"></span>
       </button>
 
-      <ul class="nav-links" id="nav-menu">
+      <ul role="list" class="nav-links" id="nav-menu">
         <li><a href="#call">Call for Participation</a></li>
         <li><a href="#dates">Dates</a></li>
         <li><a href="#submission">Submission</a></li>
@@ -113,36 +113,37 @@
     </nav>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <!-- ============================== HERO ============================== -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">
             <span class="eyebrow-dot" aria-hidden="true"></span>
-            Workshop at <a href="https://itasec.it" target="_blank" rel="noopener">ITASEC &amp; SERICS 2027</a>
+            Workshop at <a href="https://itasec.it" target="_blank" rel="noopener">ITASEC &amp; SERICS 2027<span class="sr-only"> (opens in a new tab)</span></a>
           </p>
 
-          <h1 class="hero-title" id="hero-title">CHIL<span class="d-tile">D</span>IGIT</h1>
+          <h1 class="hero-heading" id="hero-title">
+            <span class="hero-title" aria-hidden="true">CHIL<span class="d-tile">D</span>IGIT</span><span class="sr-only">CHILDIGIT – </span>
+            <span class="hero-subtitle">
+              <span class="hero-subtitle-strong">Children in a Digital World:</span>
+              Bridging Technical and Legal Perspectives on Security, Safety and Participation
+            </span>
+          </h1>
 
-          <p class="hero-subtitle">
-            <span class="hero-subtitle-strong">Children in a Digital World:</span>
-            Bridging Technical and Legal Perspectives on Security, Safety and Participation
-          </p>
-
-          <ul class="hero-meta">
+          <ul role="list" class="hero-meta">
             <li>
-              <span class="meta-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+              <span class="meta-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-calendar"/></svg></span>
               <span><span class="meta-label">Workshop day</span><span class="meta-value">February 8, 2027 · Afternoon</span></span>
             </li>
             <li>
-              <span class="meta-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span class="meta-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-pin"/></svg></span>
               <span><span class="meta-label">Location</span><span class="meta-value">Siena, Italy</span></span>
             </li>
           </ul>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#submission">How to submit <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-primary" href="#submission">How to submit <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-arrow"/></svg></a>
             <a class="btn btn-ghost" href="#call">Read the call</a>
           </div>
         </div>
@@ -150,22 +151,22 @@
         <div class="hero-art" aria-hidden="true">
           <div class="mosaic">
             <span class="tile tile--teal tile--q-tl" style="--i:0"></span>
-            <span class="tile tile--paper" style="--i:1"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <span class="tile tile--paper" style="--i:1"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-shield"/></svg></span>
             <span class="tile tile--sun tile--circle" style="--i:2"></span>
-            <span class="tile tile--sienna" style="--i:3"><svg class="icon"><use href="#i-kite"/></svg></span>
+            <span class="tile tile--sienna" style="--i:3"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-kite"/></svg></span>
 
             <span class="tile tile--pixels" style="--i:4"></span>
-            <span class="tile tile--ink" style="--i:5"><svg class="icon"><use href="#i-scales"/></svg></span>
+            <span class="tile tile--ink" style="--i:5"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-scales"/></svg></span>
             <span class="tile tile--sienna tile--half" style="--i:6"></span>
-            <span class="tile tile--paper tile--circle" style="--i:7"><svg class="icon icon--teal"><use href="#i-lock"/></svg></span>
+            <span class="tile tile--paper tile--circle" style="--i:7"><svg aria-hidden="true" focusable="false" class="icon icon--teal"><use href="#i-lock"/></svg></span>
 
-            <span class="tile tile--sun" style="--i:8"><svg class="icon"><use href="#i-chat"/></svg></span>
+            <span class="tile tile--sun" style="--i:8"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-chat"/></svg></span>
             <span class="tile tile--outline tile--circle" style="--i:9"></span>
-            <span class="tile tile--teal" style="--i:10"><svg class="icon"><use href="#i-smile"/></svg></span>
+            <span class="tile tile--teal" style="--i:10"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-smile"/></svg></span>
             <span class="tile tile--ink tile--q-br" style="--i:11"></span>
 
             <span class="tile tile--sienna tile--q-tr" style="--i:12"></span>
-            <span class="tile tile--paper" style="--i:13"><svg class="icon"><use href="#i-audit"/></svg></span>
+            <span class="tile tile--paper" style="--i:13"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-audit"/></svg></span>
             <span class="tile tile--pixels tile--pixels-sienna tile--circle" style="--i:14"></span>
             <span class="tile tile--sun tile--half-b" style="--i:15"></span>
           </div>
@@ -178,12 +179,12 @@
             <span class="deadline-label">Submission deadline</span>
             <strong class="deadline-date"><time datetime="2026-11-30">November 30, 2026</time></strong>
           </div>
-          <div class="deadline-count" aria-live="polite">
+          <div class="deadline-count" hidden>
             <span class="deadline-num" data-count>—</span>
             <span class="deadline-unit" data-count-label>days to go</span>
           </div>
           <a class="btn btn-light" href="mailto:nadia.spatari@imtlucca.it?subject=CHILDIGIT%20workshop_Submission_Surname%2C%20Name">
-            <svg class="icon"><use href="#i-mail"/></svg> Submit by e-mail
+            <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-mail"/></svg> Submit by e-mail
           </a>
         </div>
       </div>
@@ -193,7 +194,7 @@
     <section class="section" id="call" aria-labelledby="call-title">
       <div class="container">
         <header class="section-head">
-          <p class="kicker"><span class="kicker-num">01</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <p class="kicker" aria-hidden="true"><span class="kicker-num">01</span><span class="kicker-rule" aria-hidden="true"></span></p>
           <h2 id="call-title">Call for Participation</h2>
         </header>
 
@@ -224,7 +225,7 @@
             </p>
           </div>
 
-          <aside class="glance" aria-labelledby="glance-title">
+          <div class="glance">
             <h3 id="glance-title" class="glance-title">At a glance</h3>
             <dl class="glance-list">
               <div><dt>When</dt><dd>February 8, 2027<span>Afternoon</span></dd></div>
@@ -234,8 +235,8 @@
               <div><dt>Formats</dt><dd>Abstracts, position papers, short papers, reports on published results</dd></div>
               <div><dt>Proceedings</dt><dd>Not included</dd></div>
             </dl>
-            <a class="btn btn-primary btn-block" href="#submission">How to submit <svg class="icon"><use href="#i-arrow"/></svg></a>
-          </aside>
+            <a class="btn btn-primary btn-block" href="#submission">How to submit <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
         </div>
 
         <div class="topics" id="topics">
@@ -243,35 +244,35 @@
             <h3 class="sub-title">Topics of interest</h3>
             <p>Topics of interest include, but are not limited to:</p>
           </div>
-          <ul class="topic-grid">
+          <ul role="list" class="topic-grid">
             <li class="topic topic--sienna">
-              <span class="topic-icon"><svg class="icon"><use href="#i-lock"/></svg></span>
+              <span class="topic-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-lock"/></svg></span>
               <span class="topic-text">Children’s privacy and data protection</span>
             </li>
             <li class="topic topic--teal">
-              <span class="topic-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <span class="topic-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-shield"/></svg></span>
               <span class="topic-text">Cybersecurity and online safety for children</span>
             </li>
             <li class="topic topic--sun">
-              <span class="topic-icon"><svg class="icon"><use href="#i-id"/></svg></span>
+              <span class="topic-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-id"/></svg></span>
               <span class="topic-text">Age assurance and age verification solutions</span>
             </li>
             <li class="topic topic--sky">
-              <span class="topic-icon"><svg class="icon"><use href="#i-smile"/></svg></span>
+              <span class="topic-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-smile"/></svg></span>
               <span class="topic-text">Human-Computer interaction and child-centred design</span>
             </li>
             <li class="topic topic--sienna">
-              <span class="topic-icon"><svg class="icon"><use href="#i-scales"/></svg></span>
+              <span class="topic-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-scales"/></svg></span>
               <span class="topic-text">Legal and regulatory requirements for digital technologies used by children</span>
             </li>
             <li class="topic topic--teal">
-              <span class="topic-icon"><svg class="icon"><use href="#i-audit"/></svg></span>
+              <span class="topic-icon"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-audit"/></svg></span>
               <span class="topic-text">Evaluation and auditing of technologies with respect to children’s security, safety and rights to participation and agency</span>
             </li>
           </ul>
 
           <p class="notice">
-            <svg class="icon"><use href="#i-info"/></svg>
+            <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-info"/></svg>
             <span>Please note that <strong>accepted papers will NOT be included in the Proceedings</strong>.</span>
           </p>
         </div>
@@ -282,11 +283,11 @@
     <section class="section band" id="dates" aria-labelledby="dates-title">
       <div class="container">
         <header class="section-head">
-          <p class="kicker"><span class="kicker-num">01</span>Call for Participation</p>
+          <p class="kicker" aria-hidden="true"><span class="kicker-num">01</span>Call for Participation</p>
           <h2 id="dates-title">Important Dates</h2>
         </header>
 
-        <ol class="timeline">
+        <ol role="list" class="timeline">
           <li class="tl-item" data-ends="2026-12-01T11:59:59Z">
             <span class="tl-dot" aria-hidden="true"></span>
             <time class="tl-date" datetime="2026-11-30"><span class="tl-day">30</span><span class="tl-month">November<br>2026</span></time>
@@ -314,7 +315,7 @@
     <section class="section" id="submission" aria-labelledby="submission-title">
       <div class="container">
         <header class="section-head">
-          <p class="kicker"><span class="kicker-num">01</span>Call for Participation</p>
+          <p class="kicker" aria-hidden="true"><span class="kicker-num">01</span>Call for Participation</p>
           <h2 id="submission-title">Submission Information</h2>
         </header>
 
@@ -325,14 +326,14 @@
             <p>
               Submissions must be a <strong>non-anonymous PDF</strong>, formatted with the
               <a href="https://ceur-ws.org/Vol-XXX/CEURART.zip">CEURART template</a>
-              (as in the <a href="https://itasec.it/call-for-papers/" target="_blank" rel="noopener">ITASEC 2027 Call for Papers</a>).
+              (as in the <a href="https://itasec.it/call-for-papers/" target="_blank" rel="noopener">ITASEC 2027 Call for Papers<span class="sr-only"> (opens in a new tab)</span></a>).
             </p>
             <div class="step-links">
               <a class="btn btn-ghost btn-sm" href="https://ceur-ws.org/Vol-XXX/CEURART.zip">
-                <svg class="icon"><use href="#i-download"/></svg> CEURART template (ZIP)
+                <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-download"/></svg> CEURART template (ZIP)
               </a>
               <a class="btn btn-ghost btn-sm" href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank" rel="noopener">
-                Overleaf <svg class="icon"><use href="#i-external"/></svg>
+                Overleaf<span class="sr-only"> (opens in a new tab)</span> <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-external"/></svg>
               </a>
             </div>
           </article>
@@ -348,11 +349,12 @@
             <div class="subject">
               <code id="subject-line">CHILDIGIT workshop_Submission_Surname, Name</code>
               <button class="copy-btn" type="button" data-copy="#subject-line">
-                <svg class="icon"><use href="#i-copy"/></svg><span>Copy</span>
+                <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-copy"/></svg><span class="copy-label">Copy</span><span class="sr-only"> e-mail subject</span>
               </button>
             </div>
+            <span class="sr-only" role="status" id="copy-status"></span>
             <a class="btn btn-primary" href="mailto:nadia.spatari@imtlucca.it?subject=CHILDIGIT%20workshop_Submission_Surname%2C%20Name">
-              <svg class="icon"><use href="#i-mail"/></svg> Open e-mail draft
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-mail"/></svg> Open e-mail draft
             </a>
           </article>
         </div>
@@ -360,31 +362,31 @@
         <div class="types-block">
           <h3 class="sub-title">Submission Types</h3>
           <p class="sub-intro">Accepted types of submission include:</p>
-          <ol class="types">
+          <ol role="list" class="types">
             <li class="type type--sun">
               <span class="type-letter" aria-hidden="true">a</span>
-              <p class="type-limit"><span class="type-num">500</span><span class="type-unit">words max.</span></p>
               <h4>Abstracts</h4>
+              <p class="type-limit"><span class="type-num">500</span><span class="type-unit">words max.</span></p>
               <p>To suggest insights or discussion prompts.</p>
               <p class="type-note">Excluding bibliography</p>
             </li>
             <li class="type type--sienna">
               <span class="type-letter" aria-hidden="true">b</span>
-              <p class="type-limit"><span class="type-num">3</span><span class="type-unit">pages max.</span></p>
               <h4>Position Papers</h4>
+              <p class="type-limit"><span class="type-num">3</span><span class="type-unit">pages max.</span></p>
               <p class="type-note">Excluding bibliography</p>
             </li>
             <li class="type type--teal">
               <span class="type-letter" aria-hidden="true">c</span>
-              <p class="type-limit"><span class="type-num">3</span><span class="type-unit">pages max.</span></p>
               <h4>Short Papers</h4>
+              <p class="type-limit"><span class="type-num">3</span><span class="type-unit">pages max.</span></p>
               <p>Such as work in progress or case studies.</p>
               <p class="type-note">Excluding bibliography</p>
             </li>
             <li class="type type--sky">
               <span class="type-letter" aria-hidden="true">d</span>
-              <p class="type-limit"><span class="type-num">16</span><span class="type-unit">pages max.</span></p>
               <h4>Reports on already published results</h4>
+              <p class="type-limit"><span class="type-num">16</span><span class="type-unit">pages max.</span></p>
               <p>Relevant to the topics of interest.</p>
               <p class="type-note">Excluding bibliography</p>
             </li>
@@ -392,7 +394,7 @@
         </div>
 
         <div class="selection">
-          <span class="selection-icon" aria-hidden="true"><svg class="icon"><use href="#i-users"/></svg></span>
+          <span class="selection-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon"><use href="#i-users"/></svg></span>
           <div>
             <h3 class="sub-title">Selection and Participation</h3>
             <p>
@@ -410,13 +412,13 @@
     <section class="section section--alt" id="organisers" aria-labelledby="organisers-title">
       <div class="container">
         <header class="section-head">
-          <p class="kicker"><span class="kicker-num">02</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <p class="kicker" aria-hidden="true"><span class="kicker-num">02</span><span class="kicker-rule" aria-hidden="true"></span></p>
           <h2 id="organisers-title">Organising Committee</h2>
         </header>
 
         <!-- To use a photo instead of initials, replace the <span class="avatar …">…</span>
              with <img class="avatar" src="assets/img/people/<name>.jpg" alt="" width="88" height="88"> -->
-        <ul class="people">
+        <ul role="list" class="people">
           <li class="person">
             <div class="person-head">
               <img class="avatar avatar--sienna" src="assets/img/people/tibido.jpg" alt="" width="88" height="88" loading="lazy">
@@ -440,7 +442,7 @@
                 Social Good (GoodIT).
               </p>
             </div>
-            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-tibido">Read full bio</button>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-tibido"><span class="bio-toggle-label">Read full bio</span><span class="sr-only"> of Sara Tibidò</span></button>
           </li>
 
           <li class="person">
@@ -461,7 +463,7 @@
                 authored and co-authored several scientific contributions in these areas.
               </p>
             </div>
-            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-spatari">Read full bio</button>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-spatari"><span class="bio-toggle-label">Read full bio</span><span class="sr-only"> of Nadia Spatari</span></button>
           </li>
 
           <li class="person">
@@ -484,7 +486,7 @@
                 IMT Lucca.
               </p>
             </div>
-            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-ragone">Read full bio</button>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-ragone"><span class="bio-toggle-label">Read full bio</span><span class="sr-only"> of Azzurra Ragone</span></button>
           </li>
 
           <li class="person">
@@ -518,7 +520,7 @@
                 and AI conferences.
               </p>
             </div>
-            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-furfaro">Read full bio</button>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-furfaro"><span class="bio-toggle-label">Read full bio</span><span class="sr-only"> of Angelo Furfaro</span></button>
           </li>
         </ul>
       </div>
@@ -528,7 +530,7 @@
     <div class="section section--split">
       <div class="container split">
         <section class="tbd" id="tpc" aria-labelledby="tpc-title">
-          <p class="kicker"><span class="kicker-num">03</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <p class="kicker" aria-hidden="true"><span class="kicker-num">03</span><span class="kicker-rule" aria-hidden="true"></span></p>
           <h2 id="tpc-title">Technical Program Committee</h2>
           <!-- Replace the placeholder below with the committee list, e.g.:
           <ul class="committee">
@@ -542,7 +544,7 @@
         </section>
 
         <section class="tbd" id="program" aria-labelledby="program-title">
-          <p class="kicker"><span class="kicker-num">04</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <p class="kicker" aria-hidden="true"><span class="kicker-num">04</span><span class="kicker-rule" aria-hidden="true"></span></p>
           <h2 id="program-title">Workshop Program</h2>
           <!-- Replace the placeholder below with the program, e.g.:
           <ol class="agenda">
@@ -553,7 +555,7 @@
             <span class="placeholder-badge">TBD</span>
             <p>The detailed program will be announced soon. Accepted contributions will be featured on this page.</p>
             <p class="placeholder-meta">
-              <svg class="icon"><use href="#i-clock"/></svg> February 8, 2027 · Afternoon · Siena
+              <svg aria-hidden="true" focusable="false" class="icon"><use href="#i-clock"/></svg> February 8, 2027 · Afternoon · Siena
             </p>
           </div>
         </section>
@@ -564,13 +566,13 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <p class="footer-logo">CHIL<span class="d-tile">D</span>IGIT</p>
+        <p class="footer-logo"><span aria-hidden="true">CHIL<span class="d-tile">D</span>IGIT</span><span class="sr-only">CHILDIGIT</span></p>
         <p>Children in a Digital World: Bridging Technical and Legal Perspectives on Security, Safety and Participation.</p>
       </div>
       <div>
         <h2 class="footer-title">Part of</h2>
         <p>
-          <a href="https://itasec.it" target="_blank" rel="noopener">Joint National Conference on Cybersecurity<br>ITASEC &amp; SERICS 2027</a>
+          <a href="https://itasec.it" target="_blank" rel="noopener">Joint National Conference on Cybersecurity<br>ITASEC &amp; SERICS 2027<span class="sr-only"> (opens in a new tab)</span></a>
         </p>
         <p class="footer-muted">Siena, Italy · February 8–12, 2027</p>
       </div>
@@ -581,8 +583,8 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© CHILDIGIT 2027 Organising Committee<span class="credit"><span class="credit-sep" aria-hidden="true"> · </span>Website by <a href="https://www.linkedin.com/in/lopsandrea" target="_blank" rel="noopener">Andrea Lops</a></span></span>
-      <a href="#top">Back to top ↑</a>
+      <span>© CHILDIGIT 2027 Organising Committee<span class="credit"><span class="credit-sep" aria-hidden="true"> · </span>Website by <a href="https://www.linkedin.com/in/lopsandrea" target="_blank" rel="noopener">Andrea Lops<span class="sr-only"> (opens in a new tab)</span></a></span></span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 </body>
