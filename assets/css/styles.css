@@ -656,33 +656,13 @@ mark {
 }
 
 .kicker {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-.kicker-num {
-  display: inline-grid;
-  place-items: center;
-  min-width: 2.6em;
-  height: 2.1em;
-  padding: 0 0.5em;
-  border-radius: 8px;
-  background: var(--sienna-tint);
-  color: var(--link);
-  letter-spacing: 0.04em;
-}
-.kicker-rule {
-  width: 56px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--line-strong);
 }
 
 .sub-title {
@@ -862,7 +842,6 @@ mark {
 }
 .band .container { position: relative; z-index: 1; }
 .band .kicker { color: var(--band-muted); }
-.band .kicker-num { background: rgb(242 182 64 / 16%); color: var(--sun); }
 
 .timeline {
   position: relative;
