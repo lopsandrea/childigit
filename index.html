@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHILDIGIT 2027 · Children in a Digital World · ITASEC &amp; SERICS 2027</title>
+  <meta name="description" content="CHILDIGIT – Children in a Digital World: Bridging Technical and Legal Perspectives on Security, Safety and Participation. Workshop at ITASEC &amp; SERICS 2027, Siena, Italy, February 8, 2027.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbf7f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1422" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://lopsandrea.github.io/childigit/">
+
+  <!-- Social sharing (absolute URLs: update them if the site moves to another address) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lopsandrea.github.io/childigit/">
+  <meta property="og:title" content="CHILDIGIT 2027 · Children in a Digital World">
+  <meta property="og:description" content="Bridging Technical and Legal Perspectives on Security, Safety and Participation. Workshop at ITASEC &amp; SERICS 2027 · Siena, February 8, 2027.">
+  <meta property="og:image" content="https://lopsandrea.github.io/childigit/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "CHILDIGIT – Children in a Digital World: Bridging Technical and Legal Perspectives on Security, Safety and Participation",
+    "startDate": "2027-02-08",
+    "endDate": "2027-02-08",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Joint National Conference on Cybersecurity – ITASEC & SERICS 2027",
+      "address": { "@type": "PostalAddress", "addressLocality": "Siena", "addressCountry": "IT" }
+    },
+    "superEvent": {
+      "@type": "Event",
+      "name": "Joint National Conference on Cybersecurity – ITASEC & SERICS 2027",
+      "url": "https://itasec.it"
+    },
+    "organizer": [
+      { "@type": "Person", "name": "Sara Tibidò" },
+      { "@type": "Person", "name": "Nadia Spatari" },
+      { "@type": "Person", "name": "Azzurra Ragone" },
+      { "@type": "Person", "name": "Angelo Furfaro" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Icon sprite -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10" width="15" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 2.8v5.7c0 4.6-3.2 8.4-7.5 9.5-4.3-1.1-7.5-4.9-7.5-9.5V5.8z"/><path d="M9 12l2.1 2.1L15.2 10"/></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="10.8" r="2.1"/><path d="M5.9 16.2c.6-1.5 1.7-2.3 3.1-2.3s2.5.8 3.1 2.3"/><path d="M14.5 10h3.5M14.5 13.5h3.5"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.6 14.2a4.4 4.4 0 0 0 6.8 0"/><path d="M9 9.6h.01M15 9.6h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-scales" viewBox="0 0 24 24"><path d="M12 3.5v16.5M7.5 20h9M5 7h14"/><path d="M2.5 13.5L5 7l2.5 6.5a2.5 2.5 0 0 1-5 0z"/><path d="M16.5 13.5L19 7l2.5 6.5a2.5 2.5 0 0 1-5 0z"/></symbol>
+    <symbol id="i-audit" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/><path d="M7.8 10.6l1.9 1.9 3.3-3.3"/></symbol>
+    <symbol id="i-kite" viewBox="0 0 24 24"><path d="M12 2.5l6 7-6 8.5-6-8.5z"/><path d="M6 9.5h12M12 2.5V18"/><path d="M12 18c-1.4 1.1 1.4 1.9 0 3.2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8l-4.5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.8 6.8L12 13l8.2-6.2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 16.5h4"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M8 16L16 8M9.5 8H16v6.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6h.01" stroke-width="2.2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.7-3 2.9-4.8 5.5-4.8s4.8 1.8 5.5 4.8"/><path d="M15.5 5.6a3.2 3.2 0 0 1 0 5.9M17.2 14.9c1.7.6 2.9 2.2 3.3 4.6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top" aria-label="CHILDIGIT 2027, back to top">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="1" y="1" width="14" height="14" rx="4" fill="#c65a2e"/>
+          <path d="M17 15V7a6 6 0 0 1 6-6h8v14z" fill="#1f8079"/>
+          <circle cx="8" cy="24" r="7" fill="#f2b640"/>
+          <rect x="17" y="17" width="14" height="14" rx="4" class="brand-mark-ink"/>
+        </svg>
+        <span class="brand-name">CHILDIGIT</span>
+        <span class="brand-year">2027</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#call">Call for Participation</a></li>
+        <li><a href="#dates">Dates</a></li>
+        <li><a href="#submission">Submission</a></li>
+        <li><a href="#organisers">Organisers</a></li>
+        <li><a href="#tpc">Program Committee</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a class="btn btn-primary btn-sm nav-cta" href="#submission">Submit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Workshop at <a href="https://itasec.it" target="_blank" rel="noopener">ITASEC &amp; SERICS 2027</a>
+          </p>
+
+          <h1 class="hero-title" id="hero-title">CHIL<span class="d-tile">D</span>IGIT</h1>
+
+          <p class="hero-subtitle">
+            <span class="hero-subtitle-strong">Children in a Digital World:</span>
+            Bridging Technical and Legal Perspectives on Security, Safety and Participation
+          </p>
+
+          <ul class="hero-meta">
+            <li>
+              <span class="meta-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+              <span><span class="meta-label">Workshop day</span><span class="meta-value">February 8, 2027 · Afternoon</span></span>
+            </li>
+            <li>
+              <span class="meta-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span><span class="meta-label">Location</span><span class="meta-value">Siena, Italy</span></span>
+            </li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#submission">How to submit <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="#call">Read the call</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="mosaic">
+            <span class="tile tile--teal tile--q-tl" style="--i:0"></span>
+            <span class="tile tile--paper" style="--i:1"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <span class="tile tile--sun tile--circle" style="--i:2"></span>
+            <span class="tile tile--sienna" style="--i:3"><svg class="icon"><use href="#i-kite"/></svg></span>
+
+            <span class="tile tile--pixels" style="--i:4"></span>
+            <span class="tile tile--ink" style="--i:5"><svg class="icon"><use href="#i-scales"/></svg></span>
+            <span class="tile tile--sienna tile--half" style="--i:6"></span>
+            <span class="tile tile--paper tile--circle" style="--i:7"><svg class="icon icon--teal"><use href="#i-lock"/></svg></span>
+
+            <span class="tile tile--sun" style="--i:8"><svg class="icon"><use href="#i-chat"/></svg></span>
+            <span class="tile tile--outline tile--circle" style="--i:9"></span>
+            <span class="tile tile--teal" style="--i:10"><svg class="icon"><use href="#i-smile"/></svg></span>
+            <span class="tile tile--ink tile--q-br" style="--i:11"></span>
+
+            <span class="tile tile--sienna tile--q-tr" style="--i:12"></span>
+            <span class="tile tile--paper" style="--i:13"><svg class="icon"><use href="#i-audit"/></svg></span>
+            <span class="tile tile--pixels tile--pixels-sienna tile--circle" style="--i:14"></span>
+            <span class="tile tile--sun tile--half-b" style="--i:15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="deadline" data-deadline="2026-12-01T11:59:59Z">
+          <div class="deadline-info">
+            <span class="deadline-label">Submission deadline</span>
+            <strong class="deadline-date"><time datetime="2026-11-30">November 30, 2026</time></strong>
+          </div>
+          <div class="deadline-count" aria-live="polite">
+            <span class="deadline-num" data-count>—</span>
+            <span class="deadline-unit" data-count-label>days to go</span>
+          </div>
+          <a class="btn btn-light" href="mailto:nadia.spatari@imtlucca.it?subject=CHILDIGIT%20workshop_Submission_Surname%2C%20Name">
+            <svg class="icon"><use href="#i-mail"/></svg> Submit by e-mail
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 1. CALL FOR PARTICIPATION ===================== -->
+    <section class="section" id="call" aria-labelledby="call-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span class="kicker-num">01</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <h2 id="call-title">Call for Participation</h2>
+        </header>
+
+        <div class="call-grid">
+          <div class="prose">
+            <p class="lead">
+              On 17 September 2026, the European Commission released its proposal for the <mark>KIDS Act</mark>,
+              which seeks to protect children from risky digital services and AI systems within a coherent
+              regulatory and enforcement framework. Translating such legal requirements into effective, technically
+              feasible solutions calls for sustained dialogue between legal and technical experts.
+            </p>
+            <p>
+              This workshop <strong>brings together researchers and practitioners from the cybersecurity community</strong>,
+              across different disciplines, <strong>to examine how to ensure children’s security and safety while</strong>
+              upholding their right to participation and agency in the digital world.
+            </p>
+            <p>
+              The <strong>workshop aims to</strong> foster interest in the topic and promote new interdisciplinary
+              collaborations towards a digital environment that children can navigate safely. Therefore, we invite the
+              cybersecurity community, from all backgrounds, to join the first workshop on children’s rights in the
+              digital world at ITASEC &amp; SERICS 2027.
+            </p>
+            <p>
+              To foster constructive debate, the workshop welcomes abstracts, position papers, short papers and reports
+              on previously published results. Particular emphasis will be placed on interdisciplinary work that connects
+              different perspectives and stimulates dialogue across disciplines, as well as on work that identifies
+              concrete research challenges at the intersection of technology, law, security and children’s rights.
+            </p>
+          </div>
+
+          <aside class="glance" aria-labelledby="glance-title">
+            <h3 id="glance-title" class="glance-title">At a glance</h3>
+            <dl class="glance-list">
+              <div><dt>When</dt><dd>February 8, 2027<span>Afternoon</span></dd></div>
+              <div><dt>Where</dt><dd>Siena, Italy<span>ITASEC &amp; SERICS 2027</span></dd></div>
+              <div><dt>Deadline</dt><dd>November 30, 2026</dd></div>
+              <div><dt>Notification</dt><dd>December 15, 2026</dd></div>
+              <div><dt>Formats</dt><dd>Abstracts, position papers, short papers, reports on published results</dd></div>
+              <div><dt>Proceedings</dt><dd>Not included</dd></div>
+            </dl>
+            <a class="btn btn-primary btn-block" href="#submission">How to submit <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </aside>
+        </div>
+
+        <div class="topics" id="topics">
+          <div class="topics-head">
+            <h3 class="sub-title">Topics of interest</h3>
+            <p>Topics of interest include, but are not limited to:</p>
+          </div>
+          <ul class="topic-grid">
+            <li class="topic topic--sienna">
+              <span class="topic-icon"><svg class="icon"><use href="#i-lock"/></svg></span>
+              <span class="topic-text">Children’s privacy and data protection</span>
+            </li>
+            <li class="topic topic--teal">
+              <span class="topic-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <span class="topic-text">Cybersecurity and online safety for children</span>
+            </li>
+            <li class="topic topic--sun">
+              <span class="topic-icon"><svg class="icon"><use href="#i-id"/></svg></span>
+              <span class="topic-text">Age assurance and age verification solutions</span>
+            </li>
+            <li class="topic topic--sky">
+              <span class="topic-icon"><svg class="icon"><use href="#i-smile"/></svg></span>
+              <span class="topic-text">Human-Computer interaction and child-centred design</span>
+            </li>
+            <li class="topic topic--sienna">
+              <span class="topic-icon"><svg class="icon"><use href="#i-scales"/></svg></span>
+              <span class="topic-text">Legal and regulatory requirements for digital technologies used by children</span>
+            </li>
+            <li class="topic topic--teal">
+              <span class="topic-icon"><svg class="icon"><use href="#i-audit"/></svg></span>
+              <span class="topic-text">Evaluation and auditing of technologies with respect to children’s security, safety and rights to participation and agency</span>
+            </li>
+          </ul>
+
+          <p class="notice">
+            <svg class="icon"><use href="#i-info"/></svg>
+            <span>Please note that <strong>accepted papers will NOT be included in the Proceedings</strong>.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= IMPORTANT DATES ========================= -->
+    <section class="section band" id="dates" aria-labelledby="dates-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span class="kicker-num">01</span>Call for Participation</p>
+          <h2 id="dates-title">Important Dates</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item" data-ends="2026-12-01T11:59:59Z">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <time class="tl-date" datetime="2026-11-30"><span class="tl-day">30</span><span class="tl-month">November<br>2026</span></time>
+            <h3>Submission Deadline</h3>
+            <span class="tl-status"></span>
+          </li>
+          <li class="tl-item" data-ends="2026-12-16T11:59:59Z">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <time class="tl-date" datetime="2026-12-15"><span class="tl-day">15</span><span class="tl-month">December<br>2026</span></time>
+            <h3>Notification of Acceptance</h3>
+            <span class="tl-status"></span>
+          </li>
+          <li class="tl-item" data-ends="2027-02-08T23:59:59+01:00">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <time class="tl-date" datetime="2027-02-08"><span class="tl-day">08</span><span class="tl-month">February<br>2027</span></time>
+            <h3>Workshop Day</h3>
+            <p>Afternoon · ITASEC &amp; SERICS 2027, Siena</p>
+            <span class="tl-status"></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= SUBMISSION INFORMATION ======================= -->
+    <section class="section" id="submission" aria-labelledby="submission-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span class="kicker-num">01</span>Call for Participation</p>
+          <h2 id="submission-title">Submission Information</h2>
+        </header>
+
+        <div class="steps">
+          <article class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Prepare a non-anonymous PDF</h3>
+            <p>
+              Submissions must be a <strong>non-anonymous PDF</strong>, formatted with the
+              <a href="https://ceur-ws.org/Vol-XXX/CEURART.zip">CEURART template</a>
+              (as in the <a href="https://itasec.it/call-for-papers/" target="_blank" rel="noopener">ITASEC 2027 Call for Papers</a>).
+            </p>
+            <div class="step-links">
+              <a class="btn btn-ghost btn-sm" href="https://ceur-ws.org/Vol-XXX/CEURART.zip">
+                <svg class="icon"><use href="#i-download"/></svg> CEURART template (ZIP)
+              </a>
+              <a class="btn btn-ghost btn-sm" href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/wqyfdgftmcfw" target="_blank" rel="noopener">
+                Overleaf <svg class="icon"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Send it via e-mail</h3>
+            <p>
+              E-mail your submission to <strong>Nadia Spatari</strong>
+              (<a href="mailto:nadia.spatari@imtlucca.it">nadia.spatari@imtlucca.it</a>), using the following as the
+              e-mail subject:
+            </p>
+            <div class="subject">
+              <code id="subject-line">CHILDIGIT workshop_Submission_Surname, Name</code>
+              <button class="copy-btn" type="button" data-copy="#subject-line">
+                <svg class="icon"><use href="#i-copy"/></svg><span>Copy</span>
+              </button>
+            </div>
+            <a class="btn btn-primary" href="mailto:nadia.spatari@imtlucca.it?subject=CHILDIGIT%20workshop_Submission_Surname%2C%20Name">
+              <svg class="icon"><use href="#i-mail"/></svg> Open e-mail draft
+            </a>
+          </article>
+        </div>
+
+        <div class="types-block">
+          <h3 class="sub-title">Submission Types</h3>
+          <p class="sub-intro">Accepted types of submission include:</p>
+          <ol class="types">
+            <li class="type type--sun">
+              <span class="type-letter" aria-hidden="true">a</span>
+              <p class="type-limit"><span class="type-num">500</span><span class="type-unit">words max.</span></p>
+              <h4>Abstracts</h4>
+              <p>To suggest insights or discussion prompts.</p>
+              <p class="type-note">Excluding bibliography</p>
+            </li>
+            <li class="type type--sienna">
+              <span class="type-letter" aria-hidden="true">b</span>
+              <p class="type-limit"><span class="type-num">3</span><span class="type-unit">pages max.</span></p>
+              <h4>Position Papers</h4>
+              <p class="type-note">Excluding bibliography</p>
+            </li>
+            <li class="type type--teal">
+              <span class="type-letter" aria-hidden="true">c</span>
+              <p class="type-limit"><span class="type-num">3</span><span class="type-unit">pages max.</span></p>
+              <h4>Short Papers</h4>
+              <p>Such as work in progress or case studies.</p>
+              <p class="type-note">Excluding bibliography</p>
+            </li>
+            <li class="type type--sky">
+              <span class="type-letter" aria-hidden="true">d</span>
+              <p class="type-limit"><span class="type-num">16</span><span class="type-unit">pages max.</span></p>
+              <h4>Reports on already published results</h4>
+              <p>Relevant to the topics of interest.</p>
+              <p class="type-note">Excluding bibliography</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="selection">
+          <span class="selection-icon" aria-hidden="true"><svg class="icon"><use href="#i-users"/></svg></span>
+          <div>
+            <h3 class="sub-title">Selection and Participation</h3>
+            <p>
+              Participants will be selected according to contribution quality, relevance and diversity.
+              Accepted submissions will be featured on the workshop website, and
+              <strong><u>at least one author</u> of each accepted contribution must register to the workshop
+              and present the work submitted.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 2. ORGANISING COMMITTEE ======================== -->
+    <section class="section section--alt" id="organisers" aria-labelledby="organisers-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker"><span class="kicker-num">02</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <h2 id="organisers-title">Organising Committee</h2>
+        </header>
+
+        <!-- To use a photo instead of initials, replace the <span class="avatar …">…</span>
+             with <img class="avatar" src="assets/img/people/<name>.jpg" alt="" width="88" height="88"> -->
+        <ul class="people">
+          <li class="person">
+            <div class="person-head">
+              <img class="avatar avatar--sienna" src="assets/img/people/tibido.jpg" alt="" width="88" height="88" loading="lazy">
+              <div>
+                <h3 class="person-name">Sara Tibidò</h3>
+                <p class="person-role">Ph.D. Candidate in Cybersecurity</p>
+                <p class="person-aff">University of Bari “Aldo Moro” &amp; IMT School for Advanced Studies Lucca</p>
+              </div>
+            </div>
+            <div class="bio" id="bio-tibido">
+              <p>
+                Sara Tibidò is a third-year Ph.D. candidate in “Cybersecurity” at the University of Bari “Aldo Moro”
+                and IMT School for Advanced Studies Lucca, Italy. She holds a double Master’s Degree in Human Rights and
+                International Relations from both the University of Padova (Italy) and the University of Wrocław (Poland).
+                She has been a tutor of the “Children’s Rights” course, held within the Master’s Degree in “Human Rights
+                and Multilevel Governance” (University of Padova). Her research focuses on trustworthy AI, child-centered
+                AI, and regulatory compliance of AI systems for children. She has been attending various international
+                conferences in the areas of child-centered design and digital technologies for social good, such as the
+                International Conference on Evaluation and Assessment in Software Engineering (EASE), ACM Interaction
+                Design and Children Conference (IDC) and the ACM International Conference on Information Technology for
+                Social Good (GoodIT).
+              </p>
+            </div>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-tibido">Read full bio</button>
+          </li>
+
+          <li class="person">
+            <div class="person-head">
+              <img class="avatar avatar--teal" src="assets/img/people/spatari.jpg" alt="" width="88" height="88" loading="lazy">
+              <div>
+                <h3 class="person-name">Nadia Spatari</h3>
+                <p class="person-role">Ph.D. Candidate in Cybersecurity</p>
+                <p class="person-aff">IMT School for Advanced Studies Lucca</p>
+              </div>
+            </div>
+            <div class="bio" id="bio-spatari">
+              <p>
+                Nadia Spatari is a PhD candidate in Cybersecurity at the IMT School for Advanced Studies Lucca. Her
+                doctoral research focuses on AI Regulatory Sandboxes, with particular attention to safeguarding AI-based
+                systems and software used by minors, and to governance frameworks supporting the implementation of the
+                EU AI Act, at the intersection of cybersecurity, AI governance, and children’s digital rights. She has
+                authored and co-authored several scientific contributions in these areas.
+              </p>
+            </div>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-spatari">Read full bio</button>
+          </li>
+
+          <li class="person">
+            <div class="person-head">
+              <img class="avatar avatar--sun" src="assets/img/people/ragone.jpg" alt="" width="88" height="88" loading="lazy">
+              <div>
+                <h3 class="person-name">Azzurra Ragone</h3>
+                <p class="person-role">Associate Professor in Secure Software Engineering</p>
+                <p class="person-aff">University of Bari “Aldo Moro”</p>
+              </div>
+            </div>
+            <div class="bio" id="bio-ragone">
+              <p>
+                Azzurra Ragone is an Associate Professor in Secure Software Engineering at the Computer Science
+                Department at the University of Bari “Aldo Moro”, Italy. Her research focuses on responsible and
+                trustworthy AI engineering, including practitioners’ needs, human and children’s rights in AI systems,
+                and rights-based frameworks and metrics. She also works on LLM-based software engineering, from automated
+                test generation to requirements specification. She has published more than 100 papers at international
+                venues and journals. She supervises Ph.D. students of the national Ph.D. in Cybersecurity coordinated by
+                IMT Lucca.
+              </p>
+            </div>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-ragone">Read full bio</button>
+          </li>
+
+          <li class="person">
+            <div class="person-head">
+              <img class="avatar avatar--ink" src="assets/img/people/furfaro.jpg" alt="" width="88" height="88" loading="lazy">
+              <div>
+                <h3 class="person-name">Angelo Furfaro</h3>
+                <p class="person-role">Associate Professor of Computer Engineering</p>
+                <p class="person-aff">DIMES, University of Calabria</p>
+              </div>
+            </div>
+            <div class="bio" id="bio-furfaro">
+              <p>
+                Angelo Furfaro is Associate Professor of Computer Engineering (INF-05/A) at DIMES, University of
+                Calabria, Italy, and Scientific Director of the university’s CyberSecurity Laboratory. With over 20 years
+                of research experience and more than 130 international publications, his current work focuses on agentic
+                architectures and Retrieval-Augmented Generation (RAG) applied to cybersecurity. He has contributed to the
+                design of multi-agent systems for the real-time classification, explanation, and reporting of
+                cyberattacks, achieving high accuracy in detecting common web application threats, as well as agentic
+                frameworks that combine large language models with automated validation tools to generate and verify
+                security compliance rules for IT infrastructures. His research also extends to the automated design of
+                cyber training environments from natural-language specifications, and to the study of large language
+                model agents both as emerging attack vectors and as tools for strengthening system-level security.
+              </p>
+              <p>
+                He is Editor-in-Chief of Simulation Modelling Practice and Theory (Elsevier) and currently leads national
+                doctoral research projects on agentic RAG technologies for infrastructure security and on
+                privacy-preserving network defense in the post-quantum era, funded by Italy’s National Cybersecurity
+                Agency. He is a Senior Member of ACM and IEEE. He supervises PhD students in Cybersecurity at the
+                University of Calabria and IMT Lucca, and serves on program committees for major international security
+                and AI conferences.
+              </p>
+            </div>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="bio-furfaro">Read full bio</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========== 3. TECHNICAL PROGRAM COMMITTEE  ·  4. WORKSHOP PROGRAM =========== -->
+    <div class="section section--split">
+      <div class="container split">
+        <section class="tbd" id="tpc" aria-labelledby="tpc-title">
+          <p class="kicker"><span class="kicker-num">03</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <h2 id="tpc-title">Technical Program Committee</h2>
+          <!-- Replace the placeholder below with the committee list, e.g.:
+          <ul class="committee">
+            <li><span class="committee-name">Name Surname</span><span class="committee-aff">Affiliation</span></li>
+          </ul>
+          -->
+          <div class="placeholder">
+            <span class="placeholder-badge">TBD</span>
+            <p>The Technical Program Committee will be announced soon.</p>
+          </div>
+        </section>
+
+        <section class="tbd" id="program" aria-labelledby="program-title">
+          <p class="kicker"><span class="kicker-num">04</span><span class="kicker-rule" aria-hidden="true"></span></p>
+          <h2 id="program-title">Workshop Program</h2>
+          <!-- Replace the placeholder below with the program, e.g.:
+          <ol class="agenda">
+            <li><time class="agenda-time">14:00</time><div><h3 class="agenda-title">Opening</h3><p class="agenda-meta">Organising Committee</p></div></li>
+          </ol>
+          -->
+          <div class="placeholder">
+            <span class="placeholder-badge">TBD</span>
+            <p>The detailed program will be announced soon. Accepted contributions will be featured on this page.</p>
+            <p class="placeholder-meta">
+              <svg class="icon"><use href="#i-clock"/></svg> February 8, 2027 · Afternoon · Siena
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">CHIL<span class="d-tile">D</span>IGIT</p>
+        <p>Children in a Digital World: Bridging Technical and Legal Perspectives on Security, Safety and Participation.</p>
+      </div>
+      <div>
+        <h2 class="footer-title">Part of</h2>
+        <p>
+          <a href="https://itasec.it" target="_blank" rel="noopener">Joint National Conference on Cybersecurity<br>ITASEC &amp; SERICS 2027</a>
+        </p>
+        <p class="footer-muted">Siena, Italy · February 8–12, 2027</p>
+      </div>
+      <div>
+        <h2 class="footer-title">Submissions</h2>
+        <p><a href="mailto:nadia.spatari@imtlucca.it">nadia.spatari@imtlucca.it</a></p>
+        <p class="footer-muted">Deadline: November 30, 2026</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© CHILDIGIT 2027 Organising Committee<span class="credit"><span class="credit-sep" aria-hidden="true"> · </span>Website by <a href="https://www.linkedin.com/in/lopsandrea" target="_blank" rel="noopener">Andrea Lops</a></span></span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
