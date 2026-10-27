@@ -1,0 +1,15 @@
+{
+  "name": "childigit-website",
+  "private": true,
+  "description": "CHILDIGIT 2027 workshop website: tests",
+  "scripts": {
+    "test": "html-validate index.html && playwright test",
+    "test:links": "EXTERNAL=1 playwright test tests/links.spec.js",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.49.1",
+    "html-validate": "^8.18.2"
+  }
+}

@@ -23,6 +23,29 @@ python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
+## Tests
+
+```sh
+npm install        # once
+npm test           # HTML validation + the Playwright suite (uses your installed Google Chrome)
+npm run test:links # also checks that external links respond (needs internet)
+```
+
+The suite (`tests/`) starts a local server by itself and covers:
+
+- **content** (`content.spec.js`): the sections of the brief, topics, dates, submission types,
+  e-mail address and subject, template links, organisers and their photos;
+- **behaviour** (`behaviour.spec.js`): countdown and date status at fixed dates, copy button, bios,
+  navigation highlight, mobile menu, the page without JavaScript;
+- **accessibility** (`accessibility.spec.js`): axe-core WCAG 2.2 A/AA in light/dark, desktop/mobile,
+  before/after the deadline; keyboard focus (visible, never under the sticky header); headings,
+  names and roles; animations stopping within 5 seconds;
+- **layout** (`layout.spec.js`): no horizontal scrolling from 320 to 1440 px, navigation per width;
+- **links** (`links.spec.js`): in-page anchors and local files.
+
+GitHub Actions runs `npm test` on every push to `main` and on pull requests
+(`.github/workflows/tests.yml`).
+
 ## Publishing
 
 The site is served by GitHub Pages from the `main` branch (root folder): every push to `main`

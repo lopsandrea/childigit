@@ -135,6 +135,8 @@ body {
   overflow-x: hidden;
 }
 
+[hidden] { display: none !important; }
+
 h1, h2, h3, h4 { margin: 0; line-height: 1.15; font-weight: 600; }
 p { margin: 0; }
 ul, ol { margin: 0; padding: 0; list-style: none; }

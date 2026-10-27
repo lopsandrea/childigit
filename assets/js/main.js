@@ -137,7 +137,7 @@
       const open = button.getAttribute('aria-expanded') !== 'true';
       button.setAttribute('aria-expanded', String(open));
       bio.classList.toggle('is-open', open);
-      button.querySelector('.bio-toggle-label').textContent = open ? 'Show less' : 'Read full bio';
+      button.querySelector('.bio-toggle-label').textContent = open ? 'Hide full bio' : 'Read full bio';
     });
   });
 
