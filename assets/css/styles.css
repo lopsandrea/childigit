@@ -1208,7 +1208,6 @@ img.avatar {
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
-  margin-top: auto;
   padding: 26px;
   border: 2px dashed var(--line-strong);
   border-radius: var(--radius);
