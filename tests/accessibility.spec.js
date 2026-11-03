@@ -124,7 +124,7 @@ test.describe('screen reader semantics', () => {
   });
 
   test('styled lists keep their list role', async ({ page }) => {
-    for (const cls of ['nav-links', 'hero-meta', 'topic-grid', 'timeline', 'types', 'people']) {
+    for (const cls of ['nav-links', 'hero-meta', 'topic-grid', 'timeline', 'types', 'people', 'committee']) {
       await expect(page.locator(`.${cls}`)).toHaveRole('list');
     }
   });

@@ -37,6 +37,7 @@
   --btn-ink: #ffffff;
   --focus: #1f8079;
   --mark: #fbe3a4;
+  --deadline: #b42318;
 
   /* Dark band (dates, footer) — same in both modes */
   --band-bg: #16213a;
@@ -94,6 +95,7 @@
     --btn-ink: #1b0f08;
     --focus: #6fd2c6;
     --mark: rgb(242 182 64 / 30%);
+    --deadline: #ff8a80;
 
     --band-bg: #0a0f1b;
     --band-line: #26314d;
@@ -689,15 +691,6 @@ mark {
 .prose p { color: var(--ink-soft); font-size: 1.08rem; line-height: 1.75; }
 .prose p + p { margin-top: 1.1em; }
 .prose strong { color: var(--ink); font-weight: 650; }
-.prose .lead {
-  margin-bottom: 1.6em;
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.15vw, 1.6rem);
-  font-weight: 400;
-  line-height: 1.5;
-  font-variation-settings: "SOFT" 50;
-}
 
 .glance {
   position: sticky;
@@ -727,6 +720,9 @@ mark {
 }
 .glance-list dt { color: var(--muted); font-size: 0.92rem; }
 .glance-list dd { margin: 0; font-weight: 600; line-height: 1.4; }
+.glance-list .is-deadline dt,
+.glance-list .is-deadline dd { color: var(--deadline); }
+.glance-list .is-deadline dd { font-weight: 700; }
 .glance-list dd span {
   display: block;
   color: var(--muted);
@@ -1239,7 +1235,7 @@ img.avatar {
 }
 .placeholder-meta .icon { color: var(--link); }
 
-/* Ready for later: committee list and agenda */
+/* Committee list and (later) agenda */
 .committee {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

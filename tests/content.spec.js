@@ -95,9 +95,37 @@ test('introduces the organisers with their photos', async ({ page }) => {
   }
 });
 
-test('keeps TBD placeholders for the committee and the program', async ({ page }) => {
-  await expect(page.locator('#tpc .placeholder-badge')).toHaveText('TBD');
+test('lists the Technical Program Committee', async ({ page }) => {
+  await expect(page.locator('#tpc .committee-name')).toHaveText([
+    'Sara Tibidò', 'Nadia Spatari', 'Azzurra Ragone', 'Angelo Furfaro',
+    'Francesco Blefari', 'Matteo Lupinacci', 'Francesco Romeo',
+  ]);
+  await expect(page.locator('#tpc .committee-aff')).toHaveText([
+    'PhD candidate, IMT Lucca / University of Bari “Aldo Moro”',
+    'PhD candidate, IMT Lucca',
+    'Associate Professor, University of Bari “Aldo Moro”',
+    'Associate Professor, University of Calabria',
+    'Researcher, University of Calabria',
+    'PhD student, University of Calabria',
+    'PhD student, IMT Lucca',
+  ]);
+  await expect(page.locator('#tpc .placeholder')).toHaveCount(0);
+});
+
+test('keeps the TBD placeholder for the program', async ({ page }) => {
   await expect(page.locator('#program .placeholder-badge')).toHaveText('TBD');
+});
+
+test('the call opens with body-size text and the deadline stands out in red', async ({ page }) => {
+  const paragraphs = page.locator('#call .prose p');
+  const sizes = await paragraphs.evaluateAll((ps) => ps.map((p) => getComputedStyle(p).fontSize));
+  expect(new Set(sizes).size).toBe(1);
+  const deadline = page.locator('.glance-list .is-deadline dd');
+  await expect(deadline).toHaveText('November 30, 2026');
+  const [r, g, b] = (await deadline.evaluate((el) => getComputedStyle(el).color)).match(/\d+/g).map(Number);
+  expect(r).toBeGreaterThan(150);
+  expect(r).toBeGreaterThan(g * 2.5);
+  expect(r).toBeGreaterThan(b * 2.5);
 });
 
 test('credits the website author', async ({ page }) => {

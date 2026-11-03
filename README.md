@@ -56,9 +56,10 @@ If the address changes (another repository, or a custom domain under **Settings 
 
 ## Common updates
 
-- **Technical Program Committee / Workshop Program**: `index.html` has a commented-out template in each
-  section (`<ul class="committee">` and `<ol class="agenda">`). Replace the `placeholder` block with it.
-  The styles are already in place.
+- **Technical Program Committee**: one `<li>` per member in `<ul class="committee">` (name and
+  affiliation).
+- **Workshop Program**: `index.html` has a commented-out template (`<ol class="agenda">`). Replace the
+  `placeholder` block with it. The styles are already in place.
 - **Organiser photos**: put the image in `assets/img/people/` and replace the initials
   `<span class="avatar …">ST</span>` with
   `<img class="avatar" src="assets/img/people/tibido.jpg" alt="" width="88" height="88">`.
