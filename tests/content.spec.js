@@ -95,19 +95,28 @@ test('introduces the organisers with their photos', async ({ page }) => {
   }
 });
 
-test('lists the Technical Program Committee', async ({ page }) => {
+test('lists the Technical Program Committee with name and affiliation only', async ({ page }) => {
   await expect(page.locator('#tpc .committee-name')).toHaveText([
-    'Sara Tibidò', 'Nadia Spatari', 'Azzurra Ragone', 'Angelo Furfaro',
-    'Francesco Blefari', 'Matteo Lupinacci', 'Francesco Romeo',
+    'Sara Tibidò',
+    'Nadia Spatari',
+    'Azzurra Ragone',
+    'Angelo Furfaro',
+    'Francesco Blefari',
+    'Matteo Lupinacci',
+    'Francesco Romeo',
+    'Samuele Del Vescovo',
+    'Gabriel Cellammare',
   ]);
   await expect(page.locator('#tpc .committee-aff')).toHaveText([
-    'PhD candidate, IMT Lucca / University of Bari “Aldo Moro”',
-    'PhD candidate, IMT Lucca',
-    'Associate Professor, University of Bari “Aldo Moro”',
-    'Associate Professor, University of Calabria',
-    'Researcher, University of Calabria',
-    'PhD student, University of Calabria',
-    'PhD student, IMT Lucca',
+    'IMT Lucca / University of Bari “Aldo Moro”',
+    'IMT Lucca',
+    'University of Bari “Aldo Moro”',
+    'University of Calabria',
+    'University of Calabria',
+    'University of Calabria',
+    'IMT Lucca',
+    'University of Bari “Aldo Moro”',
+    'University of Bari “Aldo Moro”',
   ]);
   await expect(page.locator('#tpc .placeholder')).toHaveCount(0);
 });
