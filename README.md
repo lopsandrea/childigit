@@ -4,7 +4,7 @@ Single-page website for **CHILDIGIT – Children in a Digital World: Bridging Te
 Perspectives on Security, Safety and Participation**, a workshop at the Joint National Conference on
 Cybersecurity ITASEC & SERICS 2027 (Siena, February 8, 2027).
 
-**Live site:** https://lopsandrea.github.io/childigit/
+**Live site:** https://childigit.web.app/
 
 Plain HTML/CSS/JS: no build step and no dependencies, so you can edit it directly and serve it as is.
 
@@ -13,7 +13,8 @@ index.html              the whole page (content lives here)
 assets/css/styles.css   styles; colours are tokens at the top of the file
 assets/js/main.js       small enhancements (menu, countdown, date status, copy button, bios)
 assets/img/             favicon and social preview image (og-image.png, 1200×630)
-.nojekyll               tells GitHub Pages to serve the files untouched
+firebase.json           Firebase Hosting: what gets published (only index.html and assets/) and headers
+.firebaserc             the Firebase project (childigit)
 ```
 
 ## Preview locally
@@ -44,15 +45,26 @@ The suite (`tests/`) starts a local server by itself and covers:
 - **links** (`links.spec.js`): in-page anchors and local files.
 
 GitHub Actions runs `npm test` on every push to `main` and on pull requests
-(`.github/workflows/tests.yml`).
+(`.github/workflows/tests.yml`); on `main` it then publishes the site (see below).
 
 ## Publishing
 
-The site is served by GitHub Pages from the `main` branch (root folder): every push to `main`
-updates it within a minute or two.
+The site is served by **Firebase Hosting** (project `childigit`, https://childigit.web.app/). Every push
+to `main` runs the tests and, if they pass, deploys the site from GitHub Actions; it is live within a
+couple of minutes. The workflow authenticates with a service account key stored in the repository secret
+`FIREBASE_SERVICE_ACCOUNT`.
 
-If the address changes (another repository, or a custom domain under **Settings → Pages**), update the
-`canonical`, `og:url` and `og:image` tags in `index.html`.
+To deploy by hand (you need access to the Firebase project):
+
+```sh
+npx firebase-tools deploy --only hosting
+```
+
+Only the files that are not listed under `ignore` in `firebase.json` are published: `index.html` and
+`assets/`. If you add files at the top level, check that list.
+
+If the address changes (for example a custom domain under **Hosting** in the Firebase console), update
+the `canonical`, `og:url` and `og:image` tags in `index.html`.
 
 ## Common updates
 

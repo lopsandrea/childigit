@@ -25,7 +25,7 @@ test('every local file referenced by the page exists', async ({ page, request })
   });
   // Social preview image: absolute URL on the live site, same path locally.
   const og = await page.locator('meta[property="og:image"]').getAttribute('content');
-  paths.push(new URL(og).pathname.replace(/^\/childigit\//, ''));
+  paths.push(new URL(og).pathname.replace(/^\//, ''));
 
   expect(paths).toEqual(expect.arrayContaining(['assets/css/styles.css', 'assets/js/main.js', 'assets/img/og-image.png']));
   for (const path of paths) {

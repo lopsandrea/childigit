@@ -1,4 +1,4 @@
-name: Tests
+name: Tests and deploy
 
 on:
   push:
@@ -25,3 +25,32 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+
+  # Publishes https://childigit.web.app after the tests pass on main.
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: firebase-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Deploy to Firebase Hosting
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/firebase-sa.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
+          npx --yes firebase-tools@14.6.0 deploy --only hosting --project childigit --non-interactive
+      - name: Check the live site
+        run: |
+          curl -fsS https://childigit.web.app/ | grep -q 'CHILDIGIT'
+          # Only the site is published, not the repository files.
+          for path in .git/HEAD .github/workflows/tests.yml package.json tests/helpers.js README.md; do
+            test "$(curl -s -o /dev/null -w '%{http_code}' "https://childigit.web.app/$path")" = 404
+          done
