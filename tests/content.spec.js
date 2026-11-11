@@ -106,6 +106,9 @@ test('lists the Technical Program Committee with name and affiliation only', asy
     'Francesco Romeo',
     'Samuele Del Vescovo',
     'Gabriel Cellammare',
+    'Livia Marini',
+    'Sara Rigazio',
+    'Lavinia Vizzoni',
   ]);
   await expect(page.locator('#tpc .committee-aff')).toHaveText([
     'IMT Lucca / University of Bari “Aldo Moro”',
@@ -117,6 +120,9 @@ test('lists the Technical Program Committee with name and affiliation only', asy
     'IMT Lucca',
     'University of Bari “Aldo Moro”',
     'University of Bari “Aldo Moro”',
+    'Fondazione Bruno Kessler',
+    'University of Palermo',
+    'University of Pisa',
   ]);
   await expect(page.locator('#tpc .placeholder')).toHaveCount(0);
 });
